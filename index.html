@@ -1,0 +1,49 @@
+<!-- The index file -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GHRun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id = "mainDiv">
+      <h1>GHRun</h1>
+      <h2>A tool to run Github repositories online</h2>
+
+      <span id = "fullDocs">Full docs at <a name = "default" href = "https://github.com/markusprograms/GHRun">https://github.com/markusprograms/GHRun</a></span><br><br>
+  
+      <span>Repository name: </span><input id = "repo" type = "text"><br>
+      <small>Name of the repository to be evaluated. </small><br><br>
+      
+      <span>Author or organization: </span><input id = "author" type = "text"><br>
+      <small>Author or organization that owns the repository. </small><br><br>
+      
+      <span>Branch: </span><input id = "branch" type = "text"><br>
+      <small>Branch of the repository that will be evaluated. </small><br><br>
+      
+      <span>Index HTML file: </span><input id = "fileName" type = "text" placeholder = "index.html"><br>
+      <small>The file that will be evaluated once the repository is downloaded. Default is index.html. </small><br><br><br>
+  
+      <a id = "run" href = "run/">Run repository</a>
+    </div>
+
+    <script>
+      setInterval(() => {
+        var repo = document.getElementById("repo").value; 
+        var author = document.getElementById("author").value; 
+        var branch = document.getElementById("branch").value;
+        var fileName = document.getElementById("fileName").value;
+
+        if (fileName === "") {
+          document.getElementById("run").href = "run/" + repo + "/" + author + "/" + branch + "/"; 
+        }
+        else {
+          document.getElementById("run").href = "run/" + repo + "/" + author + "/" + branch + "/" + fileName; 
+        }
+      }, 0); 
+    </script>
+  </body>
+</html>
