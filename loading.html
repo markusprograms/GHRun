@@ -1,0 +1,31 @@
+<!-- A file that is sent to client when a repo is loading -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>#repo# - GH Run</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id = "mainDiv">
+      <h1>GHRun</h1>
+      <h2>A tool to run Github repositories online</h2>
+      <span>Preparing repository #repo# to run...</span><br>
+      <span>This might take a while</span><br>
+    </div>
+
+    <script>
+      setInterval(() => {
+        fetch('https://ghrun.markus1234.repl.co/run/#repo#/#author#/#branch#/')
+          .then(response => response.text())
+          .then(text => {
+            if (String(text).split("<!-- A file that is sent to client when a repo is loading -->")[1] === undefined) {
+              location.reload(); 
+            }
+          });
+      }, 1000);
+    </script>
+  </body>
+</html>
