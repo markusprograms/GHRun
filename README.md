@@ -19,4 +19,4 @@ This tool can be used as a simple webhosting.
     <br>
     The **FILE** is name of the file that will be evaluated. It can be for example `public/scripts/index.html`<br>
 <br>
-Once you request running a repository, the server will chache it for some time, so when you run the same repository again, you won't have to wait. 
+Once you request running a repository, the server will cache it for some time, so when you run the same repository again, you won't have to wait. 
