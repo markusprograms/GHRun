@@ -22,10 +22,14 @@ This tool can be used as a simple webhosting.
 Once you request running a repository, the server will cache it for some time, so when you run the same repository again, you won't have to wait. 
 
 ## Known problems and how to avoid them
+### Paths starting with '/'
 When you have a HTML file, that requires loading another file, for example `style.css` and you import it like `<link rel="stylesheet" href="/style.css">`, you might notice that the file doesn't load. <br>
 That's because each repository has it's own direcory, which is saved on the server (for example `run/myrepo/myusername/branch`). When you request loading a file and you add a '/' before it, it loads the file from `https://ghrun.markus1234.repl.co/style.css` but the file is at `https://ghrun.markus1234.repl.co/run/myrepo/myusername/branch/style.css`. <br>
-### Solution
-Just replace `/style.css` with `style.css`. Don't load files from links that start with '/'. 
+#### Solution
+Just replace `/style.css` with `style.css`. Don't load files from links that start with '/'. <br>
+<br>
+### Other
+If you found any other issue, please report it in Issues. 
 
 ## Feedback
 Tell me, how do you like this project in Discussions. 
