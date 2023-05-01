@@ -21,6 +21,9 @@ This tool can be used as a simple webhosting.
 <br>
 Once you request running a repository, the server will cache it for some time, so when you run the same repository again, you won't have to wait. 
 
+## Supported files
+All file types are supported. Note that the repl doesn't evaluate any files on the server. 
+
 ## Known problems and how to avoid them
 ### Paths starting with '/'
 When you have a HTML file, that requires loading another file, for example `style.css` and you import it like `<link rel="stylesheet" href="/style.css">`, you might notice that the file doesn't load. <br>
