@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["github", "online", "repository", "free", "easy-to-use", "run", "without-downloading-files"],
   "author": "Infinite coder",
   "license": "MIT",
   "dependencies": {
