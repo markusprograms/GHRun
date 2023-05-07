@@ -104,9 +104,20 @@ app.get("/style.css", (req, res) => {
   res.sendFile(__dirname + "/style.css");
 }); 
 
+// Sending background image
+app.get("/background.jpg", (req, res) => {
+  res.sendFile(__dirname + "/background.jpg");
+}); 
+
 // Wrong url
 app.get("*", (req, res) => {
   res.sendFile(__dirname + "/site-not-found.html");
 });
+
+// Purging cache every day
+setInterval(function() {
+  fs.rmSync("files", { recursive: true, force: true });
+  fs.mkdirSync("files");
+}, 24 * 60 * 60 * 1000); 
 
 server.listen(3000, () => {});
