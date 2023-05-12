@@ -27,7 +27,7 @@ The repository files are cached on the server for 24 hours, then they'll be down
     <br>
     The **FILE** is name of the file that will be evaluated. It can be for example `public/scripts/index.html`<br>
 <br>
-## Supported files
+<h2>Supported files</h2>
 All file types are supported. No files are evaluated on the server. 
 
 ## Report an issue
