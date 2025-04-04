@@ -1,0 +1,62 @@
+<!-- The index file -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GHRun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id = "mainDiv">
+      <h1>GHRun</h1>
+      <h2>Free webhosting for Github repositories</h2>
+
+      <span id = "fullDocs">Full docs at <a name = "default" href = "https://github.com/markusprograms/GHRun">https://github.com/markusprograms/GHRun</a></span><br><br>
+
+      <div class = "gridContainer">
+        <div class = "gridSpan"><span>Repository name: </span></div>
+        <div><input id = "repo" type = "text"></div>
+      </div>
+      <small>Name of the repository to be evaluated. </small><br><br>
+
+      <div class = "gridContainer">
+        <div class = "gridSpan"><span>Author or organization: </span></div>
+        <div><input id = "author" type = "text"></div>
+      </div>
+      <small>Author or organization that owns the repository. </small><br><br>
+
+      <div class = "gridContainer">
+        <div class = "gridSpan"><span>Branch: </span></div>
+        <div><input id = "branch" type = "text"></div>
+      </div>
+      <small>Branch of the repository that will be evaluated. </small><br><br>
+
+      <div class = "gridContainer">
+        <div class = "gridSpan"><span>Index HTML file: </span></div>
+        <div><input id = "fileName" type = "text" placeholder = "index.html"></div>
+      </div>
+      <small>The file that will be evaluated once the repository is downloaded. Default is index.html. </small><br><br><br>
+  
+      <a id = "run" href = "run/">Run repository</a>
+    </div>
+
+    <script>
+      setInterval(() => {
+        var repo = document.getElementById("repo").value; 
+        var author = document.getElementById("author").value; 
+        var branch = document.getElementById("branch").value;
+        var fileName = document.getElementById("fileName").value;
+
+        if (fileName === "") {
+          document.getElementById("run").href = "run/" + repo + "/" + author + "/" + branch + "/"; 
+        }
+        else {
+          document.getElementById("run").href = "run/" + repo + "/" + author + "/" + branch + "/" + fileName; 
+        }
+      }, 0); 
+    </script>
+  </body>
+</html>

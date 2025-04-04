@@ -1,0 +1,135 @@
+body {
+  font-family: 'Lato', sans-serif; 
+  text-align: center;
+  overflow-x: hidden; 
+
+  background-image: url("background.jpg"); 
+  background: url("background.jpg"); 
+  background-size: cover; 
+  background-attachment: fixed; 
+  
+  /*mix-blend-mode: multiply;*/
+}
+
+input {
+  font-family: 'Lato', sans-serif; 
+}
+h1 {
+  font-family: 'Comic Sans MS', sans-serif; 
+  text-decoration: underline; 
+  margin-bottom: 0; 
+  padding-bottom: 0; 
+  background: -webkit-linear-gradient(#66E, #22A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2 {
+  font-family: 'Comic Sans MS', sans-serif; 
+  background: -webkit-linear-gradient(#555, #000);
+  /*background: -webkit-linear-gradient(#dfd, #575);*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.25em; 
+  margin-top: 0; 
+  padding-top: 0; 
+  margin-bottom: 30px; 
+}
+#mainDiv {
+  position: absolute; 
+  top: 50%; 
+  transform: translate(50%, -50%); 
+  -moz-transform: translate(50%, -50%); 
+  width: 50%; 
+  /*backdrop-filter: blur(10px); */
+  border-radius: 20px; 
+  padding-bottom: 40px; 
+  background: rgba(255, 255, 255, .5); 
+}
+@media (max-width: 900px) {
+  #mainDiv {
+    transform: translate(0, -50%); 
+    -moz-transform: translate(0, -50%); 
+    width: 97%; 
+  }
+}
+a:not([name="default"]) {
+  text-decoration: none; 
+  color: black; 
+  border-radius: 30px; 
+  border: none; 
+  padding: 10px; 
+  padding-left: 15px; 
+  padding-right: 15px;
+  background: white; 
+  box-shadow: none; 
+  animation: runButtonNotHover .5s; 
+}
+a:not([name="default"]):hover {
+  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, .5);  
+  animation: runButtonHover .5s; 
+}
+
+#fullDocs {
+  padding: 10px; 
+  padding-left: 14px; 
+  padding-right: 14px;
+  border-radius: 1000px; 
+  background: white; 
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, .25); 
+}
+
+@keyframes runButtonHover {
+  0% {
+    box-shadow: none; 
+  }
+  100% {
+    box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, .5); 
+  }
+}
+
+@keyframes runButtonNotHover {
+  0% {
+    box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, .5);  
+  }
+  100% {
+    box-shadow: none; 
+  }
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 200px 180px;
+  width: 400px; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+.gridSpan {
+  text-align: right; 
+}
+input {
+  border: 1px dashed black; 
+  border-radius: 1px; 
+  animation: input2 .5s; 
+  outline: none; 
+}
+input:hover {
+  border-radius: 20px; 
+  animation: input1 .5s; 
+}
+
+@keyframes input1 {
+  0% {
+    border-radius: 0; 
+  }
+  100% {
+    border-radius: 20px; 
+  }
+}
+
+@keyframes input2 {
+  0% {
+    border-radius: 20px; 
+  }
+  100% {
+    border-radius: 0; 
+  }
+}
