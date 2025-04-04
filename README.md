@@ -1,5 +1,5 @@
 # GHRun
-![image](/intro/thumbnail.png)
+![image](/intro/screenshot.png)
 
 GHRun is a free open-source tool for quick **cloning and evaluating GitHub repositories**. 
 The server hosts **static files only**, no code is evaluated on the backend. 
