@@ -7,8 +7,9 @@ The server hosts **static files only**, no code is evaluated on the backend.
 ## Setup
 1. `git clone https://github.com/markusprograms/GHRun`
 2. `cd GHRun/src`
-3. `npm start`
-4. Visit `http://localhost/`
+3. `npm install`
+4. `sudo npm start`
+5. Visit `http://localhost/`
 
 ## How to use
 Enter the fields with the repository data and click "Run repository". You will be redirected to a loading page and the cloning process will begin. 
